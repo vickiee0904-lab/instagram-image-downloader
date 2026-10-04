@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram 图片下载助手",
+  "version": "1.0.0",
+  "minimum_chrome_version": "102",
+  "description": "悬停或右键保存当前页面的 Instagram 图片。",
+  "permissions": [
+    "downloads",
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Instagram 图片下载助手"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.instagram.com/*",
+        "https://instagram.com/*"
+      ],
+      "js": [
+        "common.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

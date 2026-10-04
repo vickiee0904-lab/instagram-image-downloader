@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>图片下载助手</title><link rel="stylesheet" href="popup.css"></head><body>
+<header><span>↓</span><div><h1>Instagram 图片下载</h1><p>把看到的灵感，轻松保存。</p></div></header>
+<label class="row">悬停显示下载按钮<input type="checkbox" id="hover"></label>
+<label class="row">优先页面最大尺寸<input type="checkbox" id="highRes"></label>
+<label class="row">每次选择保存位置<input type="checkbox" id="saveAs"></label>
+<label class="select">文件命名<select id="naming"><option value="organized">用户名 + 保存时间 + 帖子编号</option><option value="original">保留资源文件名</option></select></label>
+<section><strong>怎么使用</strong><p>打开 Instagram → 图片加载完成 → 鼠标悬停 → 点击「↓ 下载图片」。</p><p>也可以右键图片，选择「下载这张 Instagram 图片」。轮播帖切换后逐张下载。</p></section>
+<p class="note">默认保存到下载目录的 Instagram 文件夹。仅下载图片；主页缩略图通常比帖子详情中的图片小。</p>
+<p id="status" role="status" aria-live="polite"></p>
+<footer>设置自动保存 · 首次安装后请刷新 Instagram</footer>
+<script src="common.js"></script><script src="popup.js"></script></body></html>
